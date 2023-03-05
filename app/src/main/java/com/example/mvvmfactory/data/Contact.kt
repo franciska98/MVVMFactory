@@ -1,0 +1,14 @@
+package com.example.mvvmfactory.data
+
+data class Contact(
+    val firstName: String,
+    val lastName: String,
+    val age: String,
+    val email: String,
+    val phoneNumber: String,
+    val street: String,
+    val houseNumber: String,
+    val postalNumber: String,
+    val city: String,
+    val state: String,
+)
