@@ -5,15 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.mvvmfactory.R
+import androidx.fragment.app.viewModels
+import com.example.mvvmfactory.ContactViewModel
+import com.example.mvvmfactory.databinding.FragmentContactsBinding
 
 class ContactsFragment : Fragment() {
+    private var _binding: FragmentContactsBinding? = null
+    private val binding get() = _binding!!
+    private val viewModel: ContactViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contacts, container, false)
+        _binding = FragmentContactsBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        return view
     }
 }
