@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import com.example.mvvmfactory.ContactViewModel
 import com.example.mvvmfactory.data.Contact
 import com.example.mvvmfactory.databinding.FragmentAddContactBinding
@@ -14,7 +14,7 @@ import com.example.mvvmfactory.databinding.FragmentAddContactBinding
 class AddContactFragment : Fragment() {
     private var _binding: FragmentAddContactBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ContactViewModel by viewModels()
+    private val viewModel: ContactViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,14 +26,26 @@ class AddContactFragment : Fragment() {
 
         binding.addPersonButton.setOnClickListener {
             when {
-                binding.firstNameEditText.text.isNullOrEmpty() -> binding.firstNameEditText.error = "Error"
-                binding.lastNameEditText.text.isNullOrEmpty() -> binding.lastNameEditText.error = "Error"
+                binding.firstNameEditText.text.isNullOrEmpty() ->
+                    binding.firstNameEditText.error =
+                        "Error"
+                binding.lastNameEditText.text.isNullOrEmpty() ->
+                    binding.lastNameEditText.error =
+                        "Error"
                 binding.ageEditText.text.isNullOrEmpty() -> binding.ageEditText.error = "Error"
                 binding.emailEditText.text.isNullOrEmpty() -> binding.emailEditText.error = "Error"
-                binding.phoneNumberEditText.text.isNullOrEmpty() -> binding.phoneNumberEditText.error = "Error"
-                binding.streetEditText.text.isNullOrEmpty() -> binding.streetEditText.error = "Error"
-                binding.houseNumberEditText.text.isNullOrEmpty() -> binding.houseNumberEditText.error = "Error"
-                binding.postalNumberEditText.text.isNullOrEmpty() -> binding.postalNumberEditText.error = "Error"
+                binding.phoneNumberEditText.text.isNullOrEmpty() ->
+                    binding.phoneNumberEditText.error =
+                        "Error"
+                binding.streetEditText.text.isNullOrEmpty() ->
+                    binding.streetEditText.error =
+                        "Error"
+                binding.houseNumberEditText.text.isNullOrEmpty() ->
+                    binding.houseNumberEditText.error =
+                        "Error"
+                binding.postalNumberEditText.text.isNullOrEmpty() ->
+                    binding.postalNumberEditText.error =
+                        "Error"
                 binding.cityEditText.text.isNullOrEmpty() -> binding.cityEditText.error = "Error"
                 binding.stateEditText.text.isNullOrEmpty() -> binding.stateEditText.error = "Error"
                 else -> {
