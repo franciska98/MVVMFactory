@@ -11,15 +11,14 @@ import com.example.mvvmfactory.ContactViewModel
 import com.example.mvvmfactory.databinding.FragmentContactsBinding
 
 class ContactsFragment : Fragment() {
-    private var _binding: FragmentContactsBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentContactsBinding
     private val viewModel: ContactViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentContactsBinding.inflate(inflater, container, false)
+        binding = FragmentContactsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -38,6 +37,5 @@ class ContactsFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         super.onDestroyView()
-        _binding = null
     }
 }

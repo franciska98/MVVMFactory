@@ -12,8 +12,7 @@ import com.example.mvvmfactory.data.Contact
 import com.example.mvvmfactory.databinding.FragmentAddContactBinding
 
 class AddContactFragment : Fragment() {
-    private var _binding: FragmentAddContactBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentAddContactBinding
     private val viewModel: ContactViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -21,8 +20,7 @@ class AddContactFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentAddContactBinding.inflate(inflater, container, false)
-        val view = binding.root
+        binding = FragmentAddContactBinding.inflate(inflater, container, false)
 
         binding.addPersonButton.setOnClickListener {
             when {
@@ -56,7 +54,7 @@ class AddContactFragment : Fragment() {
             }
         }
 
-        return view
+        return binding.root
     }
 
     private fun getPersonData(): Contact = Contact(
@@ -90,6 +88,5 @@ class AddContactFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         super.onDestroyView()
-        _binding = null
     }
 }
