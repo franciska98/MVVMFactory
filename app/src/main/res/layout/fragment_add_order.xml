@@ -18,7 +18,8 @@
             android:layout_margin="20dp"
             android:text="@string/add_person_title"
             android:textSize="34sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold|italic"
+            android:fontFamily="@font/pacifico"/>
 
         <TextView
             android:id="@+id/type_Of_clothes_text_view"
@@ -52,7 +53,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/size_hint"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/weist_text_view"
@@ -70,7 +72,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/size_hint"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/hip_text_view"
@@ -88,7 +91,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/size_hint"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/shoulder_length_text_view"
@@ -106,7 +110,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/size_hint"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/sleeve_length_text_view"
@@ -122,7 +127,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
-            android:layout_marginHorizontal="15dp">
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/white">
             <RadioButton
                 android:id="@+id/sleeveless_radio_button"
                 android:layout_width="match_parent"
@@ -161,7 +167,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/color_hint"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/material_text_view"
@@ -179,7 +186,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/material_hint"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/customer_name_text_view"
@@ -197,7 +205,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/customer_name_hint"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/contact_email_text_view"
@@ -215,7 +224,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/contact_email_hint"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress"
+            android:background="@color/white"/>
 
         <TextView
             android:id="@+id/contact_phone_text_view"
@@ -233,7 +243,8 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/contact_phone_hint"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            android:background="@color/white"/>
 
         <Button
             android:id="@+id/addOrderButton"
@@ -241,6 +252,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="30dp"
-            android:text="@string/add_person"/>
+            android:text="@string/add_person"
+            android:background="@color/white"/>
     </LinearLayout>
 </ScrollView>

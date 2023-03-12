@@ -13,7 +13,8 @@
         android:layout_margin="20dp"
         android:text="@string/contacts"
         android:textSize="34sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:fontFamily="@font/pacifico"/>
 
     <ListView
         android:id="@+id/listView"
