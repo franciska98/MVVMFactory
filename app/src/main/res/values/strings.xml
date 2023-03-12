@@ -1,30 +1,31 @@
 <resources>
     <string name="app_name">MVVMFactory</string>
 
-    <string name="add_person_title">Create new person</string>
-    <string name="add_person">Add person</string>
-    <string name="contacts">Contacts</string>
+    <string name="add_person_title">Create new order</string>
+    <string name="add_person">Add order</string>
+    <string name="contacts">Orders</string>
 
-    <string name="first_name_title">First name</string>
-    <string name="first_name_hint">Ivica</string>
-    <string name="last_name_title">Last name</string>
-    <string name="last_name_hint">Ivic</string>
-    <string name="age_title">Age</string>
-    <string name="age_hint">20</string>
-    <string name="email_title">Email</string>
-    <string name="email_hint">ivica.ivic@gmail.com</string>
-    <string name="phone_number_title">Phone number</string>
-    <string name="phone_number_hint">0958795522</string>
-    <string name="street_title">Street</string>
-    <string name="street_hint">Ilica</string>
-    <string name="house_number_title">House number</string>
-    <string name="house_number_hint">25</string>
-    <string name="postal_number_title">Postal number</string>
-    <string name="postal_number_hint">10000</string>
-    <string name="city_title">City</string>
-    <string name="city_hint">Zagreb</string>
-    <string name="state_title">State</string>
-    <string name="state_hint">Hrvatska</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="type_of_clothes_title">Type</string>
+    <string name="sleeve_length_title">Sleeve length</string>
+    <string name="bust_title">Bust</string>
+    <string name="weist_title">Weist</string>
+    <string name="hip_title">Hip</string>
+    <string name="shoulder_length_title">Shoulder length</string>
+    <string name="color_title">Color</string>
+    <string name="material_title">Material</string>
+    <string name="customer_name_title">Customer name</string>
+    <string name="contact_phone_title">Contact phone</string>
+    <string name="contact_email_title">Contact email</string>
+
+    <string name="size_hint">in cm</string>
+    <string name="color_hint">Red</string>
+    <string name="material_hint">Cotton</string>
+    <string name="customer_name_hint">Petra Petric</string>
+    <string name="contact_phone_hint">0985551234</string>
+    <string name="contact_email_hint">petra.petric@gmail.com</string>
+
+    <string name="sleeve_option_sleeveless">Sleeveless</string>
+    <string name="sleeve_option_one">One sleeve</string>
+    <string name="sleeve_option_long">Long</string>
+    <string name="sleeve_option_short">Short</string>
 </resources>

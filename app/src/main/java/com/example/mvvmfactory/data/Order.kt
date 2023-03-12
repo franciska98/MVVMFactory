@@ -1,6 +1,6 @@
 package com.example.mvvmfactory.data
 
-data class Contact(
+data class Order(
     val firstName: String,
     val lastName: String,
     val age: String,
