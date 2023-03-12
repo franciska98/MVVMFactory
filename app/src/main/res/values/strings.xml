@@ -28,4 +28,10 @@
     <string name="sleeve_option_one">One sleeve</string>
     <string name="sleeve_option_long">Long</string>
     <string name="sleeve_option_short">Short</string>
+
+    <string name="error_empty_field">This field must be filled </string>
+    <string name="error_invalid_size">Should have 2 or 3 digits</string>
+    <string name="error_invalid_shoulder_length">Should have 1 or 2 digits</string>
+    <string name="error_invalid_email">Invalid email</string>
+    <string name="error_invalid_phone">Doesn\'t have the correct number of digits</string>
 </resources>
