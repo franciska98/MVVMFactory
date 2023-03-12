@@ -1,18 +1,27 @@
 package com.example.mvvmfactory.data
 
 data class Order(
-    val firstName: String,
-    val lastName: String,
-    val age: String,
-    val email: String,
-    val phoneNumber: String,
-    val street: String,
-    val houseNumber: String,
-    val postalNumber: String,
-    val city: String,
-    val state: String,
+    val type: TypeOfClothes,
+    val bust: String,
+    val weist: String,
+    val hip: String,
+    val shoulderLength: String,
+    val sleeveLength: String,
+    val color: String,
+    val material: String,
+    val customerName: String,
+    val contactEmail: String,
+    val contactPhone: String,
 ) {
     override fun toString(): String {
-        return "$firstName $lastName, $age, $city, $state"
+        return "${type.name}, $sleeveLength, $color, $material\n" +
+            "$customerName, $contactPhone, $contactEmail"
     }
+}
+
+enum class TypeOfClothes(name: String) {
+    BLAZER("Blazer"),
+    BLOUSE("Blouse"),
+    BODIE("Bodie"),
+    T_SHIRT("T-Shirt"),
 }
