@@ -9,7 +9,7 @@ class OrderViewModel : ViewModel() {
     private var _contactsLiveData = MutableLiveData<ArrayList<Order>>(arrayListOf())
     var orderLiveData: LiveData<ArrayList<Order>> = _contactsLiveData
 
-    fun addContact(order: Order) {
+    fun addOrder(order: Order) {
         _contactsLiveData.value = _contactsLiveData.value.also { it?.add(order) }
     }
 }

@@ -205,7 +205,7 @@
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:hint="@string/customer_name_hint"
-            android:inputType="number"
+            android:inputType="text"
             android:background="@color/white"/>
 
         <TextView

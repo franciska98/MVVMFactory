@@ -19,9 +19,9 @@ data class Order(
     }
 }
 
-enum class TypeOfClothes(name: String) {
-    BLAZER("Blazer"),
-    BLOUSE("Blouse"),
-    BODIE("Bodie"),
-    T_SHIRT("T-Shirt"),
+enum class TypeOfClothes {
+    BLAZER,
+    BLOUSE,
+    BODIE,
+    SHIRT,
 }

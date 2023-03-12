@@ -1,14 +1,17 @@
 package com.example.mvvmfactory.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.EditText
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.mvvmfactory.OrderViewModel
 import com.example.mvvmfactory.data.Order
+import com.example.mvvmfactory.data.TypeOfClothes
 import com.example.mvvmfactory.databinding.FragmentAddOrderBinding
 
 class AddOrderFragment : Fragment() {
@@ -22,68 +25,54 @@ class AddOrderFragment : Fragment() {
     ): View {
         binding = FragmentAddOrderBinding.inflate(inflater, container, false)
 
-//        binding.addPersonButton.setOnClickListener {
-//            when {
-//                binding.firstNameEditText.text.isNullOrEmpty() ->
-//                    binding.firstNameEditText.error =
-//                        "Error"
-//                binding.lastNameEditText.text.isNullOrEmpty() ->
-//                    binding.lastNameEditText.error =
-//                        "Error"
-//                binding.ageEditText.text.isNullOrEmpty() -> binding.ageEditText.error = "Error"
-//                binding.emailEditText.text.isNullOrEmpty() -> binding.emailEditText.error = "Error"
-//                binding.phoneNumberEditText.text.isNullOrEmpty() ->
-//                    binding.phoneNumberEditText.error =
-//                        "Error"
-//                binding.streetEditText.text.isNullOrEmpty() ->
-//                    binding.streetEditText.error =
-//                        "Error"
-//                binding.houseNumberEditText.text.isNullOrEmpty() ->
-//                    binding.houseNumberEditText.error =
-//                        "Error"
-//                binding.postalNumberEditText.text.isNullOrEmpty() ->
-//                    binding.postalNumberEditText.error =
-//                        "Error"
-//                binding.cityEditText.text.isNullOrEmpty() -> binding.cityEditText.error = "Error"
-//                binding.stateEditText.text.isNullOrEmpty() -> binding.stateEditText.error = "Error"
-//                else -> {
-//                    viewModel.addContact(getPersonData())
-//                    Log.d("Contact_Add", getPersonData().toString())
-//                    cleanEditText()
-//                }
-//            }
-//        }
+        setSpinner()
+
+        binding.addOrderButton.setOnClickListener {
+            viewModel.addOrder(getOrderData())
+            cleanData()
+        }
 
         return binding.root
     }
 
-//    private fun getPersonData(): Order = Order(
-//        firstName = binding.firstNameEditText.text.toString(),
-//        lastName = binding.lastNameEditText.text.toString(),
-//        age = binding.ageEditText.text.toString(),
-//        email = binding.emailEditText.text.toString(),
-//        phoneNumber = binding.phoneNumberEditText.text.toString(),
-//        street = binding.streetEditText.text.toString(),
-//        houseNumber = binding.houseNumberEditText.text.toString(),
-//        postalNumber = binding.postalNumberEditText.text.toString(),
-//        city = binding.cityEditText.text.toString(),
-//        state = binding.stateEditText.text.toString(),
-//    )
-//
-//    private fun cleanEditText() {
-//        with(binding) {
-//            firstNameEditText.text.clear()
-//            lastNameEditText.text.clear()
-//            ageEditText.text.clear()
-//            phoneNumberEditText.text.clear()
-//            emailEditText.text.clear()
-//            streetEditText.text.clear()
-//            houseNumberEditText.text.clear()
-//            postalNumberEditText.text.clear()
-//            cityEditText.text.clear()
-//            stateEditText.text.clear()
-//        }
-//    }
+    private fun setSpinner() {
+        val typeList = TypeOfClothes.values().map { it.toString() }
+        val adapterSpinner = ArrayAdapter(
+            requireContext(),
+            android.R.layout.simple_spinner_dropdown_item,
+            typeList,
+        )
+        binding.typeOfClothesSpinner.adapter = adapterSpinner
+    }
+
+    private fun getOrderData(): Order = Order(
+        type = TypeOfClothes.valueOf(binding.typeOfClothesSpinner.selectedItem.toString()),
+        bust = binding.bustEditText.text.toString(),
+        weist = binding.weistEditText.text.toString(),
+        hip = binding.hipEditText.text.toString(),
+        shoulderLength = binding.shoulderLengthEditText.text.toString(),
+        sleeveLength = getTextFromRadioButton(binding.sleeveRadioGroup.checkedRadioButtonId),
+        color = binding.colorEditText.text.toString(),
+        material = binding.materialEditText.text.toString(),
+        customerName = binding.customerNameEditText.text.toString(),
+        contactEmail = binding.contactEmailEditText.text.toString(),
+        contactPhone = binding.contactPhoneEditText.text.toString(),
+    )
+
+    private fun getTextFromRadioButton(id: Int): String = when (id) {
+        binding.sleevelessRadioButton.id -> "sleeveless"
+        binding.oneRadioButton.id -> "one sleeve"
+        binding.shortRadioButton.id -> "short sleeve"
+        binding.longRadioButton.id -> "long sleeve"
+        else -> "Not selected sleeve"
+    }
+
+    private fun cleanData() {
+        with(binding) {
+            dataContainer.children.filterIsInstance<EditText>().forEach { it.text.clear() }
+            sleeveRadioGroup.clearCheck()
+        }
+    }
 
     override fun onDestroy() {
         super.onDestroy()
