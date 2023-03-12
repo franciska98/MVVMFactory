@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
                 1 -> { getString(R.string.contacts) }
                 else -> { throw Resources.NotFoundException("Position not found") }
             }
+            tab.icon = when (index) {
+                0 -> { getDrawable(R.drawable.add_icon) }
+                1 -> { getDrawable(R.drawable.list_icon) }
+                else -> { getDrawable(R.drawable.ic_launcher_background) }
+            }
         }.attach()
     }
 }
