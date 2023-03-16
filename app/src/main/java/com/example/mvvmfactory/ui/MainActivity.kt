@@ -3,7 +3,7 @@ package com.example.mvvmfactory.ui
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mvvmfactory.PageAdapter
+import com.example.mvvmfactory.ui.adapter.PageAdapter
 import com.example.mvvmfactory.R
 import com.example.mvvmfactory.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity() {
                 0 -> { getString(R.string.add_person) }
                 1 -> { getString(R.string.contacts) }
                 else -> { throw Resources.NotFoundException("Position not found") }
+            }
+            tab.icon = when (index) {
+                0 -> { getDrawable(R.drawable.add_icon) }
+                1 -> { getDrawable(R.drawable.list_icon) }
+                else -> { getDrawable(R.drawable.ic_launcher_background) }
             }
         }.attach()
     }
