@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui
+package com.example.mvvmfactory.ui.add
 
 import android.os.Bundle
 import android.util.Patterns
@@ -10,11 +10,11 @@ import android.widget.EditText
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.mvvmfactory.OrderViewModel
 import com.example.mvvmfactory.R
 import com.example.mvvmfactory.data.Order
 import com.example.mvvmfactory.data.TypeOfClothes
 import com.example.mvvmfactory.databinding.FragmentAddOrderBinding
+import com.example.mvvmfactory.ui.viewmodel.OrderViewModel
 
 class AddOrderFragment : Fragment() {
     private lateinit var binding: FragmentAddOrderBinding
@@ -41,7 +41,8 @@ class AddOrderFragment : Fragment() {
                     !validSize(binding.hipEditText.text.toString()) ->
                         binding.hipEditText.error = getString(R.string.error_invalid_size)
                     !validShoulderLength(binding.shoulderLengthEditText.text.toString()) ->
-                        binding.shoulderLengthEditText.error = getString(R.string.error_invalid_size)
+                        binding.shoulderLengthEditText.error =
+                            getString(R.string.error_invalid_size)
                     !validEmail(binding.contactEmailEditText.text.toString()) ->
                         binding.contactEmailEditText.error = getString(R.string.error_invalid_email)
                     !validPhone(binding.contactPhoneEditText.text.toString()) ->

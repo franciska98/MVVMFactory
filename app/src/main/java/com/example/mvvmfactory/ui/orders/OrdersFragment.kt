@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui
+package com.example.mvvmfactory.ui.orders
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.mvvmfactory.OrderViewModel
+import com.example.mvvmfactory.ui.viewmodel.OrderViewModel
 import com.example.mvvmfactory.databinding.FragmentOrdersBinding
 
 class OrdersFragment : Fragment() {

@@ -3,7 +3,7 @@ package com.example.mvvmfactory.ui
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mvvmfactory.PageAdapter
+import com.example.mvvmfactory.ui.adapter.PageAdapter
 import com.example.mvvmfactory.R
 import com.example.mvvmfactory.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
