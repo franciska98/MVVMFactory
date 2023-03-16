@@ -102,11 +102,11 @@ class AddOrderFragment : Fragment() {
     )
 
     private fun getTextFromRadioButton(id: Int): String = when (id) {
-        binding.sleevelessRadioButton.id -> "sleeveless"
-        binding.oneRadioButton.id -> "one sleeve"
-        binding.shortRadioButton.id -> "short sleeve"
-        binding.longRadioButton.id -> "long sleeve"
-        else -> "Not selected sleeve"
+        binding.sleevelessRadioButton.id -> getString(R.string.sleeve_option_sleeveless)
+        binding.oneRadioButton.id -> getString(R.string.sleeve_option_one)
+        binding.shortRadioButton.id -> getString(R.string.sleeve_option_short)
+        binding.longRadioButton.id -> getString(R.string.sleeve_option_long)
+        else -> getString(R.string.sleeve_option_nothing_selected)
     }
 
     private fun cleanData() {

@@ -26,8 +26,9 @@
 
     <string name="sleeve_option_sleeveless">Sleeveless</string>
     <string name="sleeve_option_one">One sleeve</string>
-    <string name="sleeve_option_long">Long</string>
-    <string name="sleeve_option_short">Short</string>
+    <string name="sleeve_option_long">Long sleeve</string>
+    <string name="sleeve_option_short">Short sleeve</string>
+    <string name="sleeve_option_nothing_selected">Not selected sleeve</string>
 
     <string name="error_empty_field">This field must be filled </string>
     <string name="error_invalid_size">Should have 2 or 3 digits</string>
