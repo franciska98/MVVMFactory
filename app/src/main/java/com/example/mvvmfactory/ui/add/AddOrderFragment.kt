@@ -90,6 +90,7 @@ class AddOrderFragment : Fragment() {
 
     private fun getOrderData(): Order = Order(
         type = TypeOfClothes.valueOf(binding.typeOfClothesSpinner.selectedItem.toString()),
+        image = TypeOfClothes.valueOf(binding.typeOfClothesSpinner.selectedItem.toString()).image,
         bust = binding.bustEditText.text.toString(),
         weist = binding.weistEditText.text.toString(),
         hip = binding.hipEditText.text.toString(),
