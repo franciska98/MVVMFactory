@@ -34,5 +34,5 @@
     <string name="error_invalid_size">Should have 2 or 3 digits</string>
     <string name="error_invalid_shoulder_length">Should have 1 or 2 digits</string>
     <string name="error_invalid_email">Invalid email</string>
-    <string name="error_invalid_phone">Doesn\'t have the correct number of digits</string>
+    <string name="error_invalid_phone">Does not have the correct number of digits</string>
 </resources>

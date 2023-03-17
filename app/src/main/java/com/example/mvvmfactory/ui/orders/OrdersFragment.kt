@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.mvvmfactory.ui.viewmodel.OrderViewModel
 import com.example.mvvmfactory.databinding.FragmentOrdersBinding
+import com.example.mvvmfactory.ui.viewmodel.OrderViewModel
 
 class OrdersFragment : Fragment() {
     private lateinit var binding: FragmentOrdersBinding
