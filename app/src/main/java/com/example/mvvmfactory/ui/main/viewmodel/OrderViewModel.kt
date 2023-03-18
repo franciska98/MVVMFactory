@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui.viewmodel
+package com.example.mvvmfactory.ui.main.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,5 +11,9 @@ class OrderViewModel : ViewModel() {
 
     fun addOrder(order: Order) {
         _ordersLiveData.value = _ordersLiveData.value.also { it?.add(order) }
+    }
+
+    fun removeLastOrder() {
+        _ordersLiveData.value = _ordersLiveData.value.also { it?.removeLast() }
     }
 }

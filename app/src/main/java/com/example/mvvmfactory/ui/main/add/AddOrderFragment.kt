@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui.add
+package com.example.mvvmfactory.ui.main.add
 
 import android.os.Bundle
 import android.util.Patterns
@@ -14,7 +14,8 @@ import com.example.mvvmfactory.R
 import com.example.mvvmfactory.data.Order
 import com.example.mvvmfactory.data.TypeOfClothes
 import com.example.mvvmfactory.databinding.FragmentAddOrderBinding
-import com.example.mvvmfactory.ui.viewmodel.OrderViewModel
+import com.example.mvvmfactory.ui.main.viewmodel.OrderViewModel
+import com.google.android.material.snackbar.Snackbar
 
 class AddOrderFragment : Fragment() {
     private lateinit var binding: FragmentAddOrderBinding
@@ -50,6 +51,10 @@ class AddOrderFragment : Fragment() {
                     else -> {
                         viewModel.addOrder(getOrderData())
                         cleanData()
+                        Snackbar.make(it, R.string.snackbar_message, Snackbar.LENGTH_SHORT)
+                            .setAction(R.string.snackbar_undo_option) {
+                                viewModel.removeLastOrder()
+                            }.show()
                     }
                 }
             }

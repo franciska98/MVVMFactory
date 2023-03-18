@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui.adapter
+package com.example.mvvmfactory.ui.main.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

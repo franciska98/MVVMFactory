@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui.orders
+package com.example.mvvmfactory.ui.main.orders
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.activityViewModels
 import com.example.mvvmfactory.data.Order
 import com.example.mvvmfactory.data.TypeOfClothes
 import com.example.mvvmfactory.databinding.FragmentOrdersBinding
-import com.example.mvvmfactory.ui.adapter.OrdersRecyclerAdapter
-import com.example.mvvmfactory.ui.viewmodel.OrderViewModel
+import com.example.mvvmfactory.ui.main.adapter.OrdersRecyclerAdapter
+import com.example.mvvmfactory.ui.main.viewmodel.OrderViewModel
 
 class OrdersFragment : Fragment() {
     private lateinit var binding: FragmentOrdersBinding

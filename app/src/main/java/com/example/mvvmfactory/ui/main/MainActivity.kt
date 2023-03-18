@@ -1,4 +1,4 @@
-package com.example.mvvmfactory.ui
+package com.example.mvvmfactory.ui.main
 
 import android.content.res.Resources
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.mvvmfactory.R
 import com.example.mvvmfactory.databinding.ActivityMainBinding
-import com.example.mvvmfactory.ui.adapter.PageAdapter
+import com.example.mvvmfactory.ui.main.adapter.PageAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
