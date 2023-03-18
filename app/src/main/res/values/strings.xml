@@ -38,4 +38,11 @@
 
     <string name="snackbar_message">Order Added</string>
     <string name="snackbar_undo_option">Undo</string>
+
+    <string name="bust_detail_label">Bust: </string>
+    <string name="weist_detail_label">Weist: </string>
+    <string name="hip_detail_label">Hip: </string>
+    <string name="shoulder_length_detail_label">Shoulder length: </string>
+    <string name="color_detail_label">Color: </string>
+    <string name="material_detail_label">Material: </string>
 </resources>
