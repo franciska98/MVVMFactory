@@ -21,7 +21,7 @@ data class Order(
     }
 
     fun getCustomerData(): String {
-        return "$customerName, $contactPhone, $contactEmail"
+        return "$customerName, $contactPhone\n$contactEmail"
     }
 }
 
