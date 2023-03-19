@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = PageAdapter(this)
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, index ->
             tab.text = when (index) {
-                0 -> { getString(R.string.add_person) }
-                1 -> { getString(R.string.contacts) }
+                0 -> { getString(R.string.add_order) }
+                1 -> { getString(R.string.orders) }
                 else -> {
                     throw Resources.NotFoundException("Position not found")
                 }

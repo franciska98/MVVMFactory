@@ -1,6 +1,7 @@
 package com.example.mvvmfactory.data
 
 import com.example.mvvmfactory.R
+import java.io.Serializable
 
 data class Order(
     val type: TypeOfClothes,
@@ -15,7 +16,7 @@ data class Order(
     val customerName: String,
     val contactEmail: String,
     val contactPhone: String,
-) {
+) : Serializable {
     override fun toString(): String {
         return "$color, $material, $sleeveLength"
     }

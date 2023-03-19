@@ -16,4 +16,5 @@ class OrderViewModel : ViewModel() {
     fun removeLastOrder() {
         _ordersLiveData.value = _ordersLiveData.value.also { it?.removeLast() }
     }
+
 }

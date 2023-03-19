@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="@string/add_person_title"
+            android:text="@string/add_order_title"
             android:textSize="34sp"
             android:textStyle="bold|italic"
             android:fontFamily="@font/pacifico"/>
@@ -252,7 +252,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="30dp"
-            android:text="@string/add_person"
+            android:text="@string/add_order"
             android:background="@color/white"/>
     </LinearLayout>
 </ScrollView>

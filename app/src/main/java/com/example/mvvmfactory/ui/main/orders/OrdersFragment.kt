@@ -1,14 +1,17 @@
 package com.example.mvvmfactory.ui.main.orders
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.mvvmfactory.data.Order
 import com.example.mvvmfactory.data.TypeOfClothes
 import com.example.mvvmfactory.databinding.FragmentOrdersBinding
+import com.example.mvvmfactory.ui.detail.OrderDetailActivity
 import com.example.mvvmfactory.ui.main.adapter.OrdersRecyclerAdapter
 import com.example.mvvmfactory.ui.main.viewmodel.OrderViewModel
 
@@ -29,7 +32,20 @@ class OrdersFragment : Fragment() {
 
         fillRecyclerView()
         viewModel.orderLiveData.observe(viewLifecycleOwner) { orderList ->
-            binding.recyclerView.adapter = OrdersRecyclerAdapter(requireContext(), orderList)
+            var adapter = OrdersRecyclerAdapter(requireContext(), orderList)
+            binding.recyclerView.adapter = adapter
+            adapter.setOnItemClickListener(object : OrdersRecyclerAdapter.onItemClickListener {
+                override fun onItemClick(position: Int) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Order for ${orderList[position].customerName}",
+                        Toast.LENGTH_SHORT,
+                    ).show()
+                    val intent = Intent(requireContext(), OrderDetailActivity::class.java)
+                    intent.putExtra("order", orderList[position])
+                    startActivity(intent)
+                }
+            })
         }
     }
 

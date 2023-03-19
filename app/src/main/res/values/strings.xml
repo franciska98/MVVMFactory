@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">MVVMFactory</string>
 
-    <string name="add_person_title">Create new order</string>
-    <string name="add_person">Add order</string>
-    <string name="contacts">Orders</string>
+    <string name="add_order_title">Create new order</string>
+    <string name="add_order">Add order</string>
+    <string name="orders">Orders</string>
+    <string name="order">Order</string>
 
     <string name="type_of_clothes_title">Type</string>
     <string name="sleeve_length_title">Sleeve length</string>
