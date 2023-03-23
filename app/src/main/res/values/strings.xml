@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">MVVMFactory</string>
 
-    <string name="add_person_title">Create new order</string>
-    <string name="add_person">Add order</string>
-    <string name="contacts">Orders</string>
+    <string name="add_order_title">Create new order</string>
+    <string name="add_order">Add order</string>
+    <string name="orders">Orders</string>
+    <string name="order">Order</string>
 
     <string name="type_of_clothes_title">Type</string>
     <string name="sleeve_length_title">Sleeve length</string>
@@ -34,5 +35,15 @@
     <string name="error_invalid_size">Should have 2 or 3 digits</string>
     <string name="error_invalid_shoulder_length">Should have 1 or 2 digits</string>
     <string name="error_invalid_email">Invalid email</string>
-    <string name="error_invalid_phone">Doesn\'t have the correct number of digits</string>
+    <string name="error_invalid_phone">Does not have the correct number of digits</string>
+
+    <string name="snackbar_message">Order Added</string>
+    <string name="snackbar_undo_option">Undo</string>
+
+    <string name="bust_detail_label">Bust: </string>
+    <string name="weist_detail_label">Weist: </string>
+    <string name="hip_detail_label">Hip: </string>
+    <string name="shoulder_length_detail_label">Shoulder length: </string>
+    <string name="color_detail_label">Color: </string>
+    <string name="material_detail_label">Material: </string>
 </resources>
